@@ -12,14 +12,21 @@ t.setposition(xc, yc)
 t.forward(r)
 t.left(90)
 t.pendown()
-t.circle(200)
+t.circle(r)
 t.penup()
 
 t.color('red')
-t.goto(x,y)
+t.goto(x, y)
 t.pendown()
 t.dot()
 
-if
+t.penup()
+t.setposition(xc - 30, yc - r - 10)
+if (xc - x)**2 + (yc - y)**2 == r**2:
+    t.write('точка на окружности')
+elif (xc - x)**2 + (yc - y)**2 <= r**2:
+    t.write('точка внутри окружности')
+elif (xc - x)**2 + (yc - y)**2 >= r**2:
+    t.write('точка вне окружности')
 
 t.done()
